@@ -32,4 +32,9 @@ public class UserService {
 		return mapper.toDto(u);
 	}
 
+	public String deleteUserById(int id) {
+		repository.deleteById(id);
+		return "{id} deleted successfully";
+	}
+
 }
